@@ -6,7 +6,7 @@
 /*   By: nmilan <nmilan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 14:04:23 by nmilan            #+#    #+#             */
-/*   Updated: 2023/07/13 14:12:35 by nmilan           ###   ########.fr       */
+/*   Updated: 2023/07/13 15:47:40 by nmilan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,10 @@ private:
 		int			_attackDamage;
 public:
 	ClapTrap(std::string name);
+	
+	
 	~ClapTrap();
+	void	attack(const std::string& target);
+	void	takeDamage(unsigned int amount);
+	void	beRepaired(unsigned int amount);
 };
-
-ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0){	
-	std::cout << "Constructor called for " << name << std::endl; 
-}
-
-ClapTrap::~ClapTrap(){
-	std::cout << "Destructor called for " << _name << std::endl; 
-}
-
