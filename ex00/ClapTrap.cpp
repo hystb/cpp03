@@ -6,7 +6,7 @@
 /*   By: nmilan <nmilan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 14:04:26 by nmilan            #+#    #+#             */
-/*   Updated: 2023/07/13 15:53:07 by nmilan           ###   ########.fr       */
+/*   Updated: 2023/08/01 17:35:28 by nmilan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,43 @@ ClapTrap::~ClapTrap(){
 }
 
 void	ClapTrap::attack(const std::string& target){
-	_energyPoints--;
-	std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << "points of damage!" << std::endl;
+	if(_energyPoints > 0 && _hitPoints > 0)
+	{
+		_energyPoints--;
+		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " \
+		<< _attackDamage << " points of damage!" << std::endl;
+	}
+	else if (_hitPoints > 0 && _energyPoints == 0)
+		std::cout << "Not in of energy to make attack action." << std::endl;
+	else
+		std::cout << _name << " is already dead too late!" << std::endl;
 }
 
+void	ClapTrap::takeDamage(unsigned int amount){
+	if (_hitPoints == 0)
+		std::cout << _name << " is already dead too late!" << std::endl;
+	else
+	{
+		_hitPoints -= amount;
+		std::cout << "ClapTrap " << _name << " take damage " << ", causing " \
+		<< amount << "points of damage to him!" << std::endl;
+		if (_hitPoints < 0)
+		{
+			std::cout << _name << " died." << std::endl;
+			_hitPoints = 0;
+		}
+	}
+}
+
+void	ClapTrap::beRepaired(unsigned int amount){
+	if(_energyPoints > 0 && _hitPoints > 0)
+	{
+		_energyPoints--;
+		std::cout << "ClapTrap " << _name << " heal himself " \
+		<< amount << " hit points!" << std::endl;
+	}
+	else if (_hitPoints > 0 && _energyPoints == 0)
+		std::cout << "Not in of energy to make heal action." << std::endl;
+	else
+		std::cout << _name << " is already dead too late!" << std::endl;
+}
