@@ -6,13 +6,13 @@
 /*   By: nmilan <nmilan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 14:04:26 by nmilan            #+#    #+#             */
-/*   Updated: 2023/08/03 15:48:52 by nmilan           ###   ########.fr       */
+/*   Updated: 2023/08/03 12:43:26 by nmilan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(100), _energyPoints(50), _attackDamage(20){	
+ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0){	
 	std::cout << "Constructor called for " << name << std::endl; 
 }
 
