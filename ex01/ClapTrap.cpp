@@ -26,6 +26,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap& src){
 
 ClapTrap::ClapTrap(const ClapTrap& src){
 	*this = src;
+	std::cout << "ClapTrap constructor by copy called for " << _name << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(100), _energyPoints(50), _attackDamage(20){	
