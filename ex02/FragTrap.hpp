@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmilan <nmilan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 15:37:37 by nmilan            #+#    #+#             */
-/*   Updated: 2023/08/28 16:29:42 by nmilan           ###   ########.fr       */
+/*   Created: 2023/08/28 16:25:55 by nmilan            #+#    #+#             */
+/*   Updated: 2023/08/28 16:32:32 by nmilan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class FragTrap : public ClapTrap
 {
 private:
 	
 public:
-	ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(const ScavTrap &src);
-	ScavTrap &operator=(const ScavTrap &src);
-	~ScavTrap();
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(const FragTrap &src);
+	FragTrap &operator=(const FragTrap &src);
+	~FragTrap();
 
-	void	attack(const std::string& target);
-	void 	guardGate();
 };
 
 

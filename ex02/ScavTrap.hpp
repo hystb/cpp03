@@ -6,7 +6,7 @@
 /*   By: nmilan <nmilan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 15:37:37 by nmilan            #+#    #+#             */
-/*   Updated: 2023/08/03 15:49:34 by nmilan           ###   ########.fr       */
+/*   Updated: 2023/08/28 16:30:51 by nmilan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ public:
 	ScavTrap &operator=(const ScavTrap &src);
 	~ScavTrap();
 
-	void guardGate();
+	void	attack(const std::string& target);
+	void 	guardGate();
 };
 
 

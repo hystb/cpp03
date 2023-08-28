@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scavtrap.cpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmilan <nmilan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 15:37:32 by nmilan            #+#    #+#             */
-/*   Updated: 2023/08/03 15:49:55 by nmilan           ###   ########.fr       */
+/*   Updated: 2023/08/28 16:31:01 by nmilan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,18 @@ ScavTrap::~ScavTrap(){
 
 void ScavTrap::guardGate(){
 	std::cout << "ScavTrap " << _name << " entered Gate keeper mode !" << std::endl;
+}
+
+
+void	ScavTrap::attack(const std::string& target){
+	if(_energyPoints > 0 && _hitPoints > 0)
+	{
+		_energyPoints--;
+		std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " \
+		<< _attackDamage << " points of damage!" << std::endl;
+	}
+	else if (_hitPoints > 0 && _energyPoints == 0)
+		std::cout << "Not in of energy to make attack action." << std::endl;
+	else
+		std::cout << _name << " is already dead too late!" << std::endl;
 }
