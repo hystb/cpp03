@@ -14,24 +14,26 @@
 
 int main(void)
 {
-	ClapTrap tony("tony");
-	tony.takeDamage(9);
-	tony.attack("tony2");
-	tony.beRepaired(5);
-	tony.takeDamage(9);
-	tony.beRepaired(5);
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
-	tony.attack("tony2");
+	ClapTrap ct = ClapTrap("Jesous");
+	ct.attack("Alfred");
+	ct.attack("Louis");
+	ct.attack("Jean");
+	ct.attack("Jacques");
+	ct.attack("Timothe");
+
+	ct.takeDamage(9);
+
+	ct.beRepaired(1);
+	ct.beRepaired(1);
+	ct.beRepaired(1);
+	ct.beRepaired(1);
+	ct.beRepaired(1);
+	ct.beRepaired(1);
+	ct.attack("Timothe");
+
+	ct.takeDamage(10);
+	ct.beRepaired(1);
+	ct.attack("Alfred");
+	
 	return 0;
 }

@@ -23,7 +23,7 @@ public:
 	ScavTrap();
 	ScavTrap(std::string name);
 	ScavTrap(const ScavTrap &src);
-	ScavTrap &operator=(const &src);
+	ScavTrap &operator=(const ScavTrap &src);
 	~ScavTrap();
 
 	void guardGate();

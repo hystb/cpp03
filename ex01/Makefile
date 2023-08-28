@@ -3,11 +3,12 @@ CC 			= c++
 
 CFLAGS 		= -Wall -Wextra -Werror -std=c++98
 
-NAME 		= Clap
+NAME 		= Scav
 #---------------------------------------------------#
 SRCS		= \
 main.cpp\
 ClapTrap.cpp\
+ScavTrap.cpp\
 
 OBJ_DIR 	= .obj
 
@@ -15,6 +16,7 @@ OBJS		= $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 
 HEADERS		= \
 ClapTrap.hpp\
+ScavTrap.hpp\
 #---------------------------------------------------#
 all:
 	$(MAKE) $(NAME)
