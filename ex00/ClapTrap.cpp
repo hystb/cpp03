@@ -12,7 +12,22 @@
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(100), _energyPoints(50), _attackDamage(20){	
+ClapTrap::ClapTrap(void) : _name("noname"), _hitPoints(10), _energyPoints(10), _attackDamage(0){
+	std::cout << "Constructor called for " << name << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap& src){
+	_name = src.name;
+	_attackDamage = src._attackDamage;
+	_energyPoints = src._energyPoints;
+	_hitPoints = src._hitPoints;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& src){
+	*this = src;
+}
+
+ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0){	
 	std::cout << "Constructor called for " << name << std::endl; 
 }
 
