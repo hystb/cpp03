@@ -15,12 +15,12 @@
 
 # include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 private:
-	FragTrap();
 	
 public:
+	FragTrap();
 	FragTrap(std::string name);
 	FragTrap(const FragTrap &src);
 	FragTrap &operator=(const FragTrap &src);
