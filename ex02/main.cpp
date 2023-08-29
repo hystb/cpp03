@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
 int main(void)
@@ -18,7 +19,7 @@ int main(void)
 	FragTrap assignement_copy = frag_1;
 	FragTrap parent_copy = FragTrap(assignement_copy);
 
-	assignement_copy.defineName("Michel");
+	assignement_copy.setName("Michel");
 	std::cout << "-----------------FIGHT-----------------" << std::endl;
 	assignement_copy.attack("Alfred");
 	frag_1.takeDamage(30);
